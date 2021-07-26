@@ -11,7 +11,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "postinstall": "expo-yarn-workspaces postinstall && cd ../.. && yarn build"
+    "postinstall": "expo-yarn-workspaces postinstall && patch-package && cd ../.. && yarn build"
   },
   "dependencies": {
     "@acme/ui": "*",
@@ -40,6 +40,7 @@
     "@types/react": "~16.9.35",
     "@types/react-dom": "~16.9.8",
     "@types/react-native": "~0.63.2",
+    "patch-package": "^6.4.7",
     "typescript": "~4.0.0"
   },
   "eslintConfig": {

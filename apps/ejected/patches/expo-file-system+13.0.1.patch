@@ -1,0 +1,14 @@
+diff --git a/node_modules/expo-file-system/android/src/main/java/expo/modules/filesystem/CountingRequestBody.kt b/node_modules/expo-file-system/android/src/main/java/expo/modules/filesystem/CountingRequestBody.kt
+index a68f482..970a8d7 100644
+--- a/node_modules/expo-file-system/android/src/main/java/expo/modules/filesystem/CountingRequestBody.kt
++++ b/node_modules/expo-file-system/android/src/main/java/expo/modules/filesystem/CountingRequestBody.kt
+@@ -44,7 +44,8 @@ class CountingRequestBody(
+ 
+   override fun writeTo(sink: BufferedSink) {
+     val countingSink = CountingSink(sink, this, progressListener)
+-    val bufferedSink = Okio.buffer(countingSink)
++    // val bufferedSink = Okio.buffer(countingSink)
++    val bufferedSink = sink.buffer()
+     requestBody.writeTo(bufferedSink)
+     bufferedSink.flush()
+   }

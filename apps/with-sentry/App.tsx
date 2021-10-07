@@ -2,6 +2,7 @@ import { Paragraph, Strong } from "@acme/ui";
 import { StatusBar } from "expo-status-bar";
 import { useCallback } from "react";
 import { Button, StyleSheet, View } from "react-native";
+import { version as RNVersion } from "react-native/package.json";
 import * as Sentry from "sentry-expo";
 
 Sentry.init({
@@ -16,7 +17,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Paragraph>
-        Hello from an <Strong>EAS</Strong> monorepo (with-sentry)
+        Hello from an <Strong>EAS</Strong> monorepo (with-sentry - {RNVersion})
       </Paragraph>
       <Button title="Trigger error" onPress={onTriggerError} />
       <StatusBar style="auto" />

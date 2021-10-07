@@ -1,12 +1,13 @@
 import { Paragraph, Strong } from "@acme/ui";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
+import { version as RNVersion } from "react-native/package.json";
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Paragraph>
-        Hello from an <Strong>EAS</Strong> monorepo (managed)
+        Hello from an <Strong>EAS</Strong> monorepo (managed - {RNVersion})
       </Paragraph>
       <StatusBar style="auto" />
     </View>

@@ -1,11 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Paragraph, Strong } from "@acme/ui";
+import { StatusBar } from "expo-status-bar";
+import { useCallback } from "react";
+import { Button, StyleSheet, View } from "react-native";
 
 export default function App() {
+  const onTriggerError = useCallback(() => {
+    throw new Error("This is an error");
+  }, []);
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Paragraph>
+        Hello from an <Strong>EAS</Strong> monorepo (with-sentry)
+      </Paragraph>
+      <Button title="Trigger error" onPress={onTriggerError} />
       <StatusBar style="auto" />
     </View>
   );
@@ -14,8 +22,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });

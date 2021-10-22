@@ -1,6 +1,6 @@
-__generated__
-node_modules
-.expo/*
+node_modules/
+.expo/
+dist/
 npm-debug.*
 *.jks
 *.p8

@@ -6,9 +6,9 @@
   "scripts": {
     "build": "echo 'Nothing to build'",
     "test": "eslint --ext js,ts,tsx .",
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
     "web": "expo start --web",
     "eject": "expo eject",
     "eas-build-post-install": "yarn workspaces run build"
@@ -27,7 +27,12 @@
     "react-dom": "17.0.1",
     "react-native": "0.64.2",
     "react-native-web": "0.17.1",
-    "sentry-expo": "^4.0.3"
+    "sentry-expo": "^4.0.3",
+    "expo-splash-screen": "~0.13.3",
+    "react-native-gesture-handler": "~1.10.2",
+    "react-native-reanimated": "~2.2.0",
+    "react-native-safe-area-context": "3.3.2",
+    "react-native-screens": "~3.8.0"
   },
   "devDependencies": {
     "@acme/babel-preset-expo": "*",

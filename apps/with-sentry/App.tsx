@@ -6,6 +6,7 @@ import * as Sentry from "sentry-expo";
 
 Sentry.init({
   dsn: "https://2034b43a8da54401be835e15d1031bb9@o58562.ingest.sentry.io/5878591",
+  enableInExpoDevelopment: true,
 });
 
 export default function App() {

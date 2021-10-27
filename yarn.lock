@@ -8120,10 +8120,9 @@ send@0.17.1:
     range-parser "~1.2.1"
     statuses "~1.5.0"
 
-sentry-expo@^4.0.4:
+"sentry-expo@github:byCedric/sentry-expo#@bycedric/fix-sentry-cli-path":
   version "4.0.4"
-  resolved "https://registry.yarnpkg.com/sentry-expo/-/sentry-expo-4.0.4.tgz#4e877aaf462bab2a61877b67e2a8523bd7a44403"
-  integrity sha512-IuQOehWJGR95yo43OFBOI+D8Q9gS5YlTBpnjbfQM8Hta4z1rG+TN6keWqg5pGGBejaUuakwNWEvpYuWVILt1fg==
+  resolved "https://codeload.github.com/byCedric/sentry-expo/tar.gz/70ada731dd54cce62bdd8dc763a5f7adb72051a1"
   dependencies:
     "@expo/config-plugins" "^2.0.2"
     "@expo/config-types" "^41.0.0"

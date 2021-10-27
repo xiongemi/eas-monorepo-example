@@ -9,8 +9,12 @@ Sentry.init({
 });
 
 export default function App() {
-  const onTriggerError = useCallback(() => {
-    throw new Error("This is an error");
+  const onTriggerCrash = useCallback(() => {
+    throw new Error("This is an unhandled error causing a crash");
+  }, []);
+
+  const onTriggerCaught = useCallback(() => {
+    Sentry.Native.captureException(new Error("This is a handled error"));
   }, []);
 
   return (
@@ -18,7 +22,8 @@ export default function App() {
       <Paragraph>
         Hello from an <Strong>EAS</Strong> monorepo (with-sentry)
       </Paragraph>
-      <Button title="Trigger error" onPress={onTriggerError} />
+      <Button title="Trigger crash error" onPress={onTriggerCrash} />
+      <Button title="Trigger cuaght error" onPress={onTriggerCaught} />
       <StatusBar style="auto" />
     </View>
   );

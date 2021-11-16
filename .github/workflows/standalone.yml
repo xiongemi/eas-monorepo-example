@@ -28,7 +28,7 @@ jobs:
         with:
           node-version: 14.x
       - name: 🚀 Setup EAS
-        uses: expo/expo-github-action@v6
+        uses: byCedric/expo-github-action@refactor/multiple-actions
         with:
           eas-version: latest
           eas-cache: true

@@ -14,9 +14,10 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@nrwl/workspace": "latest",
     "@nrwl/cli": "latest",
+    "@nrwl/expo": "^13.8.5",
     "@nrwl/tao": "latest",
+    "@nrwl/workspace": "latest",
     "typescript": "4.2.4"
   }
 }

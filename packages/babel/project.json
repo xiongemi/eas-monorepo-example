@@ -1,0 +1,23 @@
+{
+  "root": "packages/babel",
+  "sourceRoot": "packages/babel",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/babel/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/babel"],
+      "options": {
+        "jestConfig": "packages/babel/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

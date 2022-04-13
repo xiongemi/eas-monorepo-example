@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "projects": {
+    "babel": "packages/babel",
+    "ui": "packages/ui",
+    "ejected": "apps/ejected",
+    "managed": "apps/managed",
+    "with-dev-client": "apps/with-dev-client",
+    "with-sentry": "apps/with-sentry"
+  }
+}

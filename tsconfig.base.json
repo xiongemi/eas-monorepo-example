@@ -1,3 +1,9 @@
 {
-  "compilerOptions": {}
+  "compilerOptions": {
+    "paths": {
+      "@acme/ui": ["packages/ui/src/index.tsx"],
+      "@acme/babel-preset-expo": ["packages/babel/index.js"],
+      "@acme/eslint-config": ["packages/eslint/index.js"]
+    }
+  }
 }

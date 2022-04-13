@@ -1,6 +1,6 @@
 {
-  "private": true,
   "name": "@acme/monorepo",
+  "private": true,
   "scripts": {
     "build": "yarn workspaces run build",
     "test": "yarn workspaces run test",
@@ -9,16 +9,34 @@
     "with-sentry": "yarn workspace @acme/app-with-sentry",
     "with-dev-client": "yarn workspace @acme/app-with-dev-client"
   },
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
+  "dependencies": {
+    "expo": "^44.0.0",
+    "expo-splash-screen": "~0.14.1",
+    "expo-status-bar": "~1.2.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-native": "0.64.3",
+    "react-native-web": "0.17.1"
+  },
   "devDependencies": {
+    "@babel/core": "^7.14.6",
     "@nrwl/cli": "latest",
     "@nrwl/expo": "^13.8.5",
+    "@nrwl/nx-cloud": "latest",
     "@nrwl/tao": "latest",
     "@nrwl/workspace": "latest",
-    "typescript": "4.2.4",
-    "@nrwl/nx-cloud": "latest"
+    "@types/react": "~17.0.21",
+    "@types/react-dom": "~17.0.9",
+    "@types/react-native": "~0.64.12",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "babel-preset-expo": "^8.5.1",
+    "eslint": "7.32.0",
+    "eslint-config-universe": "^8.0.0",
+    "jest": "^27.5.1",
+    "jest-expo": "^44.0.1",
+    "prettier": "^2.4.1",
+    "ts-jest": "^27.1.4",
+    "typescript": "~4.3.5"
   }
 }

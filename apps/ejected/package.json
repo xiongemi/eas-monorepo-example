@@ -1,20 +1,19 @@
 {
-  "private": true,
   "name": "@acme/app-ejected",
   "version": "1.0.0",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "build": "echo 'Nothing to build'",
-    "test": "eslint --ext js,ts,tsx .",
     "start": "expo start --dev-client",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "eas-build-post-install": "yarn workspaces run build"
+    "eas-build-pre-install": "cd ../../ && cp yarn.lock ./apps/ejected/ && yarn install && mv ./apps/ejected/eas.js ./index.js",
+    "postinstall": "cd ../../ && yarn install && npx nx sync-deps ejected && npx nx ensure-symlink ejected"
   },
   "dependencies": {
-    "@acme/ui": "*",
     "expo": "^44.0.0",
     "expo-file-system": "~13.1.0",
     "expo-splash-screen": "~0.14.1",
@@ -28,17 +27,5 @@
     "react-native-safe-area-context": "3.3.2",
     "react-native-screens": "~3.10.1",
     "react-native-web": "0.17.1"
-  },
-  "devDependencies": {
-    "@acme/babel-preset-expo": "*",
-    "@acme/eslint-config": "*",
-    "@babel/core": "^7.12.9",
-    "@types/react": "~17.0.21",
-    "@types/react-dom": "~17.0.9",
-    "@types/react-native": "~0.64.12",
-    "typescript": "~4.3.5"
-  },
-  "eslintConfig": {
-    "extends": "@acme/eslint-config"
   }
 }

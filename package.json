@@ -25,6 +25,7 @@
     "@nrwl/nx-cloud": "latest",
     "@nrwl/tao": "latest",
     "@nrwl/workspace": "latest",
+    "@tsconfig/recommended": "^1.0.1",
     "@types/react": "~17.0.21",
     "@types/react-dom": "~17.0.9",
     "@types/react-native": "~0.64.12",
@@ -36,6 +37,7 @@
     "jest": "^27.5.1",
     "jest-expo": "^44.0.1",
     "prettier": "^2.4.1",
+    "react-native-builder-bob": "^0.18.1",
     "ts-jest": "^27.1.4",
     "typescript": "~4.3.5"
   }
